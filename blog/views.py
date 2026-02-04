@@ -1,6 +1,11 @@
 from django.shortcuts import render
 from django.views import generic
+from django.http import HttpResponse
 from blog.models import Post
+
+
+def home(request):
+    return HttpResponse("hello world!")
 
 
 class PostView(generic.ListView):
